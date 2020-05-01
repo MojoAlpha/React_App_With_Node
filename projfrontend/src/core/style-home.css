@@ -1,0 +1,244 @@
+body,html{
+ height: 100%;
+ width: 100%;   
+ margin: 0;
+ font-family: Montserrat;
+ font-size: 1vw;
+ align-items: center;
+ justify-content: center;
+}
+
+.topnav{
+    background-color: #fff;
+    overflow: hidden;
+    top: 0;
+    padding-top: 0.5vw;
+    width: 95%;
+    border-bottom: 0.1vw solid #999;
+    margin-left: 2.5vw;
+    min-height: 3.5vw;
+}
+
+.topnav a{
+    text-decoration: none;
+    float: right;
+    display: inline-block;
+    color: #555;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 0.8vw;
+    margin-top: 1.4vw;
+}
+
+.anim::after{
+    display: block;
+    margin-top: 0.3vw;
+    content: '';
+    background-color: #555;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+    height: 0.1vw;
+}
+.anim:hover:after{
+    width: 100%;
+}
+.navIcon1{
+    font-size: 1.5vw;
+    padding-left: 35%;
+    padding-right: 35%;
+    padding-top: 0.1vw;
+    padding-bottom:0.1vw ;
+    border-radius: 50%;
+    transition: background-color 0.5s linear;
+}
+.navIcon1:hover{
+    background-color: #666;
+    color: #fff;
+}
+.grid-item img{
+    height: 100%;
+     width: 50%;
+    float: right;   
+}
+.grid-container{
+    overflow: hidden;
+    display: grid;
+    transition: box-shadow 0.5s linear;
+}
+.grid-container:hover{
+    box-shadow: 15px 15px 20px grey;
+}
+.logo{
+    border: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 4em;
+    width: 25%;
+    position: relative;
+    left: 3.5rem;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.top{
+    overflow: hidden;
+    height: 54vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.top h1{
+    margin-left: 40%;
+    font-size: 3.5vw;
+    text-align: center;
+    color: #444;
+}
+.top h4{
+    margin-left: 40%;
+    margin-top: 0;
+    font-size: 1vw;
+    text-align: center;
+    color: #666;
+}
+.shop-btn{
+    background: #CBCDCB;
+    margin-top: 1vw;
+    padding: 1vw 2vw 1vw 2vw;
+    border-top-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    transition: all 0.5s;
+}
+.shop-btn:hover{
+    background: #fff;
+    border: 0.2vw solid #607D86;
+    color: #333;
+    letter-spacing: 0.1vw;
+    box-shadow: 0.5vw 0.5vw 0.5vw gray;
+}
+.slide-show{
+    height: 80%;
+    width: 100%;
+    overflow: hidden;
+}
+.slide-show img {
+    size: inherit;
+    width: 100%; 
+    height: 47vw; 
+    position: absolute;
+    z-index:-1;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+.slide-container{
+    width: 100%;
+    margin-top: 2vw ;
+    transition: box-shadow 0.5s linear;
+    height: 56vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+.slide-container:hover{
+    box-shadow: 10px 10px 15px 15px grey;
+}
+.slide-container h1{
+    margin-bottom: 1vw;
+}
+.keys{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    object-fit: contain;
+    align-items: center;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    color: #555;
+}
+.key-el img{
+    width: 25%;
+    height: 25%;
+}
+.key-el{
+    display: flex;
+    font-size: 0.55vw;
+    margin-right: 9vw;
+    margin-left: 9vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.slide-show{
+    width: 100%;
+    z-index: 0;
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s display linear;
+}
+.con-details{
+    opacity: 0;
+    transition: 1s opacity linear;
+}
+.contact:hover .con-details{
+    opacity: 1;
+}
+.best h1{
+    width: 100%;
+    text-align: center;
+    z-index: -1;
+    color: #555;
+    font-family: cardo;
+    font-size: 2.8vw;
+}
+.best h3{
+    font-size: 1.2vw;
+    position: relative;
+    top: 5vw;
+}
+.foot-grid{
+    margin-bottom: 0;
+    margin-top: 8vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    color: #555;
+    padding-bottom: 4vw;
+}
+.foot-cont{
+    display: inline-block;
+    text-align: center;
+    margin-top: 4vw;
+}
+.foot-cont p{
+    font-size: 1vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+.foot-cont h3{
+    font-size: 1.5vw;
+}
+.foot-cont img{
+    margin-right: 0.5vw;
+    height: 2vw;
+    width: 2vw;
+}
+.foot-cont p:hover{
+    color: #C44B4F;
+}
+.footer{
+    background: #CBCDCB;
+    transition: box-shadow 0.5s linear;
+}
+.footer:hover{
+    box-shadow: 1vw 1vw 1.5vw 1.5vw grey;
+
+}

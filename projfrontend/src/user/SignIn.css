@@ -1,0 +1,127 @@
+body,html{
+    margin: 0;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+a{
+    text-decoration: none;
+    font-weight: 800;
+    color: #607D86;
+    font-size: 1.2vw;
+    margin-top: 1vw;
+    margin-bottom: 3vw;
+}
+input:focus {
+    outline:none;
+    box-shadow: 5px 5px 10px gray;
+}
+input{
+    transition: all 0.5s ease-in-out;
+}
+input[type="password"] {font:small-caption;font-size:1.3vw;}
+form{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    box-shadow: 8px 8px 16px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 48vw;
+    width: 35vw;
+    border-radius: 2vw;
+    min-width: 170px;
+    min-height: 230px;
+}
+.container p{
+    margin: 0;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: center;
+    font-size: 1.2vw;
+}
+.container h1{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 2vw;
+    text-align: center;
+    margin: 0;
+    margin-top: 2vw;
+    margin-bottom: 1.5vw;
+}
+.info{
+    border: 0.1vw solid #999;
+    width: 27vw;
+    height: 2.5vw;
+    border-radius: 0.6vw;
+    font-size: 1.2vw;
+    margin: 0;
+    letter-spacing: 0.15vw;   
+}
+.login-btn{
+    width: 100%;
+    border: 0;
+    margin-top: 2.5vw;
+    height: 3vw;
+    border-radius: 0.5vw;
+    font-size: 1.2vw;
+    color: #fff;
+    background: #C44B4F;
+    transition: all 0.5s ease-in-out;
+}
+.login-btn:hover{
+    box-shadow: 0.8vw 0.8vw 1.5vw gray;
+}
+.login-btn:focus{
+    box-shadow: 0px 0px 0px #fff;
+}
+.top{
+    border: 0;
+    height: 4.5vw;
+    width: 6vw;
+}
+.pass-dot{
+    letter-spacing: 0.2vw;
+    font-weight: 900;
+}
+.pass{
+    height: 2vw;
+    width: 2vw; 
+    margin-top: 0.4vw;
+    position: relative;
+    top: 0.4vw;
+    left: -2.3vw;
+}
+.err{
+    border: 0.1vw solid rgb(201, 57, 62);
+    background: rgb(228, 154, 145);
+    color: rgb(167, 9, 9);
+    padding: 1vw 1vw 1vw 1vw;
+    width: 26vw;
+    border-radius: 0.8vw;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: 600;
+}
+.suc{
+    font-weight: 600;
+    border: 0.1vw solid #32CD32;
+    background: #98FB98;
+    color: #32CD32;
+    padding: 1vw 1vw 1vw 1vw;
+    width: 26vw;
+    border-radius: 0.8vw;
+    text-align: center;
+    font-size: 1vw;
+}
