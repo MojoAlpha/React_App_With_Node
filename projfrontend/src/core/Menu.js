@@ -13,13 +13,27 @@ const currentTab = (history, path) => {
 };
 
 const Menu = ({history}) => {
+  require('./style-home.css')
 
   return (
     <div>
     <div className="topnav">
-    <Link style={currentTab(history,'/signin')} to='/signin'><i class="fa fa-user navIcon1"></i></Link>
-    <Link style={currentTab(history,'/cart')} to='/cart'><i class="fa fa-shopping-cart navIcon1" style={{'padding': '0.15em 0.2em 0.15em 0.2em'}}></i></Link>
+    {isAuthenticated() &&  isAuthenticated().user.role ===0 && (
+    <Link href='/signout' onClick={() => {
+      signout(() => {
+        history.push('/');
+      })
+    }}><i class="fa fa-user navIcon1"></i></Link>
+    )}
+    {!isAuthenticated() && (
+      <Link style={currentTab(history,'/signin')} to='/signin'><i class="fa fa-user navIcon1"></i></Link>
+    )}
+    {isAuthenticated() && (
+      <Link style={currentTab(history,'/cart')} to='/cart'><i class="fa fa-shopping-cart navIcon1" style={{'padding': '0.15em 0.2em 0.15em 0.2em'}}></i></Link>
+    )}
+    {isAuthenticated() && (
     <a href="/search"><i class="fa fa-search navIcon1" style={{'paddingLeft': '0.17em', 'paddingRight': '0.17em'}}></i></a>
+    )}
     <div><ReactLogo class="logo" /></div>
 </div>
     </div>

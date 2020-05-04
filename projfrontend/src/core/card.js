@@ -12,12 +12,15 @@ import { addItemToCart, removeItemFromCart } from './helper/cartHelper';
         reload = undefined
     }) => {
 
+      require('./style-card.css')
+
       const [redirect, setRedirect] = useState(false)
       const [count, setCount] = useState(product.count)
 
       const cardTitle = product ? product.name : "Product Img"
       const cardDescription = product ? product.description : "Default Description"
       const cardPrice = product ? product.price : "Default"
+      const cardStock = product ? product.stock : "1"
 
       const addToCart = () => {
         addItemToCart(product, () => setRedirect(true))
@@ -34,15 +37,16 @@ import { addItemToCart, removeItemFromCart } from './helper/cartHelper';
           addtoCart && (
             <button
                     onClick={addToCart}
-                    className="btn btn-block btn-outline-success mt-2 mb-2"
+                    className="add-btn"
                   >
-                    Add to Cart
+                  <img src="https://img.icons8.com/windows/32/000000/shopping-bag-full.png" className='bag' /> <span style={{'position':'relative','top':'-0.2vw'}}>Add to Cart</span>
                   </button>
           )
         )
       }
 
       const showRemoveFromCart = (removeFromCart) => {
+
         return (
           removeFromCart && (
             <button
@@ -50,7 +54,7 @@ import { addItemToCart, removeItemFromCart } from './helper/cartHelper';
                       removeItemFromCart(product._id)
                       setReload(!reload)
                     }}
-                    className="btn btn-block btn-outline-danger mt-2 mb-2"
+                    className="add-btn"
                   >
                     Remove from cart
                   </button>
@@ -60,24 +64,32 @@ import { addItemToCart, removeItemFromCart } from './helper/cartHelper';
 
 
         return (
-          <div className="card text-white bg-dark border border-info ">
-            <div className="card-header lead">{cardTitle}</div>
+          <div className="item-card">
+            <div className="card-title">{cardTitle}</div>
             <div className="card-body">
-              <ImageHelper product={product} />
-              <p className="lead bg-success font-weight-normal text-wrap">
-                {cardDescription}
-              </p>
-              <p className="btn btn-success rounded  btn-sm px-4">$ {cardPrice}</p>
-              <div className="row">
-                <div className="col-12">
+              <ImageHelper product={product} className='card-img' />
+              <div className='price-button'>
+              <p className="price">$ {cardPrice}</p>
+                <div className="">
                  {showAddToCart(addtoCart)}
                 </div>
-                <div className="col-12">
+                <div className="">
                   {showRemoveFromCart(removeFromCart)}
                   {getARedirect(redirect)}
-                </div>
               </div>
+              <br />
+              </div>
+              <p className="card-description">
+              <b>Description :-<br /> </b>
+                {cardDescription}
+              </p>
             </div>
+            {cardStock!=0 && (
+              <span style={{'color':'green','font-weight':'600'}}>In Stock!!</span>
+            )}
+            {cardStock==0 && (
+              <span style={{'color':'Red','font-weight':'600'}}>Out Of Stock!!</span>
+            )} 
           </div>
         );
       };

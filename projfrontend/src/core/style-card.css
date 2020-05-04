@@ -1,0 +1,73 @@
+.item-card{
+    width: 22vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    margin-top: 0.55vw;
+    margin-bottom: 0.55vw;
+    flex-direction: column;
+    border-radius: 1vw;
+    padding: 0.5vw;
+    transition: box-shadow 0.75s ease-in-out;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+.item-card:hover{
+    box-shadow: 0.3vw 0.3vw 0.9vw gray;
+}
+.card-title{
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 1.4vw;
+    margin-bottom: 1vw;
+    margin-top: 0.6vw;
+}
+.card-img{
+    height: 100%;
+    width: 100%;
+}
+.card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.price-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.price{
+    font-weight: 900;
+    font-size: 1.3vw;
+    margin-right: 1vw;
+}
+.add-btn{
+    border: 0;
+    padding: 0.6vw 1.2vw 0.6vw 1.2vw;
+    border-radius: 1vw;
+    font-size: 1.2vw;
+    width: 17vw;
+    background: #E7D2CC;
+    transition: box-shadow 0.5s ease-in;
+    margin-top: 0.8vw;
+}
+.add-btn:hover{
+    box-shadow: 0.3vw 0.3vw 0.6vw gray;
+}
+.bag{
+    height: 1.6vw;
+    margin: 0;
+    padding: 0;
+}
+.card-description{
+    width: 100%;
+    margin-left: 0.5vw;
+    text-align: left;
+    margin-bottom: 3vw;
+}
+.Instock{
+    color: green;
+}

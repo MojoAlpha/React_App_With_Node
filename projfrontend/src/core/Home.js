@@ -1,20 +1,22 @@
-import React, {useState, useEffect} from 'react';
-import '../styles.css'
-import {API} from '../backend';
+import React, {Component, useState} from 'react';
 import Base from './Base';
-import Card from './card';
-import { getProducts } from './helper/coreapicalls';
 import mainPic from './bg3.jpg'
 import slide1 from './slide1.jpg';
 import slide2 from './slide2.jpg'
 import slide3 from './slide3.png'
 import slide4 from './slide4.jpg'
 import slide5 from './slide5.jpg'
-import slideShowImages from './script';
+import { isAuthenticated } from '../auth/helper';
 
 
 function Home() {
   require('./style-home.css')
+  const [count, setCount] = useState(1);
+  const sliding=()=>{
+      setTimeout(() => {
+          setCount((count+1)%5+1);
+      }, 4000);
+    }
 
     return (
       <Base title='Home Page' description='Welcome to the T-Shirt Store'>
@@ -24,7 +26,13 @@ function Home() {
           <div className="top">
              <h1>Design Reflects What You Are</h1> 
              <h4>We At Odrio Believe That What You Wear Reflects A Major Part Of Your Personality</h4>
-             <h4 className="shop-btn" style={{'marginTop': '2em', 'color': '#4C5355'}}>SHOP NOW</h4>
+             {!isAuthenticated() && (
+             <h4 className="shop-btn" style={{'marginTop': '2em', 'color': '#4C5355'}}><a href='/signup'>SHOP NOW</a></h4>
+             )}
+             {
+                 isAuthenticated() && (
+                    <h4 className="shop-btn" style={{'marginTop': '2em', 'color': '#4C5355'}}><a href='/user/dashboard'>SHOP NOW</a></h4>
+                 )}
           </div>
       </div>
   </div>
@@ -48,15 +56,15 @@ function Home() {
   </div>
   <div className="slide-container">
       <div>
-          <h1 className="anim" style={{"fontFamily": "Cardo", "letterSpacing": "0.1em", "fontSize": "2vw"}}>FEATURED COLLECTIONS</h1>
+          <h1 className="anim" style={{"fontFamily": "Cardo", "letterSpacing": "0.1em", "fontSize": "2vw", 'position':'relative', 'top':'-1.5vw'}}>FEATURED COLLECTIONS</h1>
       </div>
-      {slideShowImages()}
   <div className="slide-show">
-  <img src={slide1} alt='show' />
-  <img src={slide2} alt='show' />
-  <img src={slide3} alt='show' />
-  <img src={slide4} alt='show' />
-  <img src={slide5} alt='show' />   
+  {sliding()}
+    {count==1 && <img src={slide1} />}
+    {count==2 && <img src={slide2} />}
+    {count==3 && <img src={slide3} />}
+    {count==4 && <img src={slide4} />}
+    {count==5 && <img src={slide5} />}
   </div>
  </div>
      <div className="best"><h1>LEADING FOR A REASON...</h1>
