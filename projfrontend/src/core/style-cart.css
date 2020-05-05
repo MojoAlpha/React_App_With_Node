@@ -1,0 +1,13 @@
+.grid-container-cart Card{
+    margin-right: 8vw;
+    padding-right: 8vw;
+}
+.cart-item{
+    margin: 3vw;
+}
+.main-menu-back{
+    text-decoration: none;
+    background: #333;
+    color: #fff;
+    font-weight: 600;
+}

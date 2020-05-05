@@ -26,16 +26,12 @@ const UserDashboard = () => {
 
     return (
         <Base title='UserDashboard Page'>
+        <a href='/'><img className='back' src="https://img.icons8.com/cotton/64/000000/circled-chevron-left.png"/></a>
+        <div className='main-head'>
+        <h2 style={{margin:'0',fontSize:'2vw',position:'relative',top:'-1vw'}}>Our Great Deals</h2>
+        <p style={{fontFamily:'cursive', margin:'0',marginLeft:'1vw'}}>A variety of designs to choose from...</p>
+        </div>
           <div className='grid-container2'>
-           <div className='grid-items'>
-            <img src="https://img.icons8.com/officel/80/000000/user.png" className='user' />
-            <span>Edit Your Details</span>
-            <h1>Welcome Sir!!</h1>
-            <h3>We Provide You With Some Of The World's Finest Fabric Designs...</h3>
-            <h3>Hope You Would Have A Great Experience With Us...And Remember To Give Us Your Valuable Feedback...</h3>
-            <h4>Seek Help & Support</h4>
-            <button className='contact-btn'>Contact Us</button>
-           </div>
            <div className='product-list'>
             {products.map((product,index) => {
               return (

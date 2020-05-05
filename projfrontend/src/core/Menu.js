@@ -5,7 +5,7 @@ import {ReactComponent as ReactLogo} from '../user/logo3.svg';
 
 const currentTab = (history, path) => {
     if(history.location.pathname === path){
-        return {background: '#333', color: '#fff'}
+        return {background: '#333', color: '#fff','borderRadius':'1vw'}
     }
     else{
         return {color: '##333'}
@@ -19,11 +19,13 @@ const Menu = ({history}) => {
     <div>
     <div className="topnav">
     {isAuthenticated() &&  isAuthenticated().user.role ===0 && (
-    <Link href='/signout' onClick={() => {
+    <Link href='/signout' on onClick={() => {
       signout(() => {
         history.push('/');
       })
-    }}><i class="fa fa-user navIcon1"></i></Link>
+    }}><div className="tooltip"><i class="fa fa-user navIcon1"></i>
+    <span className="tooltiptext">Sign Out!!</span>
+  </div></Link>
     )}
     {!isAuthenticated() && (
       <Link style={currentTab(history,'/signin')} to='/signin'><i class="fa fa-user navIcon1"></i></Link>

@@ -10,6 +10,8 @@ import StripeCheckout from './stripeCheckout';
 
 const Cart =()=> {
 
+    require('./style-cart.css')
+
     const [products, setProducts] = useState([])
     const [reload, setReload] = useState(false)  //tricking the app to reload as sometimes due to many children mounting is not rendering
 
@@ -19,8 +21,7 @@ const Cart =()=> {
 
     const loadAllProducts= () => {
         return (
-            <div>
-              <h2>This section is to load products</h2>
+            <div className='grid-container-cart' style={{'display':'grid', 'grid-template-columns': '32vw 32vw 32vw','gridGap':'1vw','marginLeft':'1vw'}}>
               {products.map((product, index) => (
                   <Card 
                   key={index}
@@ -38,16 +39,18 @@ const Cart =()=> {
     const loadCheckout = () => {
         return (
             <div>
-              <h2>This section is for checkout</h2>
+              
             </div>
         )
     }
 
     return (
-        <Base title='Cart Page' description='Ready to Checkout'>
-            <div className='row'>
-               <div className='col-6'>{loadAllProducts()}</div>
-               <div className='col-6'><StripeCheckout products={products} setReload={setReload} /></div>
+        <Base>
+        <a href='/user/dashboard' className='main-menu-back' style={{'textDecoration':'none','background':'#333','color':'#fff','fontWeight':'600',
+       'padding':'0.5vw 1vw 0.5vw 1vw','borderRadius':'0.5vw','marginLeft':'1vw'}}>Back To Dashboard</a>
+       <div><StripeCheckout style={{'float':'right'}} products={products} setReload={setReload} /></div>
+        <h2>Cart</h2>
+            <div style={{'background':'#999'}}>{loadAllProducts()}
             </div>
         </Base>
     );

@@ -1,5 +1,8 @@
+button{
+    outline: 0;
+}
 .item-card{
-    width: 22vw;
+    width: 30vw;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -13,13 +16,14 @@
     transition: box-shadow 0.75s ease-in-out;
     padding-top: 1vw;
     padding-bottom: 1vw;
+    margin-right: 1vw;
 }
 .item-card:hover{
     box-shadow: 0.3vw 0.3vw 0.9vw gray;
 }
 .card-title{
     font-family: sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.4vw;
     margin-bottom: 1vw;
     margin-top: 0.6vw;
@@ -42,17 +46,19 @@
 .price{
     font-weight: 900;
     font-size: 1.3vw;
-    margin-right: 1vw;
+    margin-right: 1.8vw;
+    position: relative;
+    top: 0.6vw;
 }
 .add-btn{
     border: 0;
     padding: 0.6vw 1.2vw 0.6vw 1.2vw;
     border-radius: 1vw;
     font-size: 1.2vw;
-    width: 17vw;
+    width: 20vw;
     background: #E7D2CC;
     transition: box-shadow 0.5s ease-in;
-    margin-top: 0.8vw;
+    margin-top: 1vw;
 }
 .add-btn:hover{
     box-shadow: 0.3vw 0.3vw 0.6vw gray;
@@ -64,10 +70,28 @@
 }
 .card-description{
     width: 100%;
+    font-weight: 600;
     margin-left: 0.5vw;
     text-align: left;
     margin-bottom: 3vw;
+    font-size: 1vw;
 }
-.Instock{
-    color: green;
+.quantity{
+    width: 100%;
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.1vw;
+    font-weight: 600;
+    margin-left: 0.5vw;
+}
+.quantity input{
+    border-radius: 0.5vw;
+    font-size: 1.2vw;
+    border: 0.1vw solid gray;
+    padding-left: 0.5vw;
+    width: 4vw;
+    height: 1.5vw;
+    outline: 0;
+    text-align: center;
+
 }

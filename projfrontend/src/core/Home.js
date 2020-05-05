@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react';
+import React, {Component, useState,useEffect} from 'react';
 import Base from './Base';
 import mainPic from './bg3.jpg'
 import slide1 from './slide1.jpg';
@@ -12,11 +12,15 @@ import { isAuthenticated } from '../auth/helper';
 function Home() {
   require('./style-home.css')
   const [count, setCount] = useState(1);
+  const [reload, setReload] = useState(false)
   const sliding=()=>{
       setTimeout(() => {
           setCount((count+1)%5+1);
       }, 4000);
     }
+    useEffect(() => {
+        
+    },[reload])
 
     return (
       <Base title='Home Page' description='Welcome to the T-Shirt Store'>

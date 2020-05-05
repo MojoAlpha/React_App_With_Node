@@ -246,5 +246,20 @@ a{
 }
 .footer:hover{
     box-shadow: 1vw 1vw 1.5vw 1.5vw grey;
-
 }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 7vw;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.5vw 0;
+    border-radius: 1vw;
+    position: relative;
+    right: 0.4vw;
+    top: 4vw;
+    position: absolute;
+    z-index: 5;
+  }
+    .tooltip:hover .tooltiptext {
+    visibility: visible;}

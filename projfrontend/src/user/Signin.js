@@ -82,7 +82,6 @@ const Signin = () => {
 
     const signInForm = () => {
         return(
-            <div>
             <div className="container">
             <ReactLogo className='top' />
             <h1>Login To Odrio Account</h1>
@@ -92,15 +91,14 @@ const Signin = () => {
             <a href="/learn">Learn More</a>
             {errorMessage()}
             {successMessage()}
-            <div>
-                <h3 style={{'marginTop': '1vw', 'marginBottom': '0.5vw', 'fontSize': '1.2vw'}}>Email : </h3><input type="email" onChange={handleChange('email')} value={email} placeholder="&nbsp;Email" required className="info" />
-                <h3 style={{'margin-top': '1vw', 'margin-bottom': '0.5vw', 'font-size': '1.2vw'}}>Password : </h3><input type="password" onChange={handleChange('password')} value={password} placeholder=" * * * * * * * *" style={{'letterSpacing': '0.2vw', 'fontWeight': '900'}} required className="info pass-dot" />
+            <div style={{width:'100%'}}>
+                <h3 style={{'marginTop': '1em', 'marginBottom': '0.5em',marginLeft:'1em', 'fontSize': '1.2em'}}>Email : </h3><input type="email" onChange={handleChange('email')} value={email} placeholder="&nbsp;Email" required className="info" />
+                <h3 style={{'margin-top': '1em', 'margin-bottom': '0.5em',marginLeft:'1em', 'font-size': '1.2em'}}>Password : </h3><input type="password" onChange={handleChange('password')} value={password} placeholder=" * * * * * * * *" style={{'letterSpacing': '0.2em', 'fontWeight': '900'}} required className="info pass-dot" />
                 <img src="https://img.icons8.com/ios-filled/50/000000/lock.png" alt='Lock' className="pass" /><br />
                 <input type="Submit" onClick={onSubmit} value="Login" className="login-btn" />
-                <p style={{'marginTop': '1vw', 'fontWeight': '600'}}>New To <span style={{'color': '#4C5355'}}>ODRIO</span> ? <a href="/signup">SignUp</a></p>
+                <p style={{'marginTop': '1em',marginBottom:'1em', 'fontWeight': '600'}}>New To <span style={{'color': '#4C5355'}}>ODRIO</span> ? <a href="/signup">SignUp</a></p>
             </div>
         </div>
-            </div>
         )
     }
 

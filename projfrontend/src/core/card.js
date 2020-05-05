@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, Fragment} from 'react';
 import ImageHelper from './helper/ImgHelper';
 import { Redirect } from 'react-router-dom';
 import { addItemToCart, removeItemFromCart } from './helper/cartHelper';
@@ -16,12 +16,14 @@ import { addItemToCart, removeItemFromCart } from './helper/cartHelper';
 
       const [redirect, setRedirect] = useState(false)
       const [count, setCount] = useState(product.count)
+      const [inCart, setIncart] = useState(false);
 
       const cardTitle = product ? product.name : "Product Img"
       const cardDescription = product ? product.description : "Default Description"
       const cardPrice = product ? product.price : "Default"
       const cardStock = product ? product.stock : "1"
 
+      
       const addToCart = () => {
         addItemToCart(product, () => setRedirect(true))
       }
@@ -80,16 +82,23 @@ import { addItemToCart, removeItemFromCart } from './helper/cartHelper';
               <br />
               </div>
               <p className="card-description">
-              <b>Description :-<br /> </b>
+              <b>Description :-<br /><br /> </b>
                 {cardDescription}
               </p>
             </div>
-            {cardStock!=0 && (
+            {
+              removeFromCart && (
+                <div className='quantity'>
+                <label>Quantity : </label><input type='number' defaultValue='1' />
+                </div>
+              )
+            }
+            {addtoCart && cardStock!=0 && (
               <span style={{'color':'green','font-weight':'600'}}>In Stock!!</span>
-            )}
-            {cardStock==0 && (
+              )}
+              {addtoCart && cardStock==0 && (
               <span style={{'color':'Red','font-weight':'600'}}>Out Of Stock!!</span>
-            )} 
+            )}
           </div>
         );
       };
