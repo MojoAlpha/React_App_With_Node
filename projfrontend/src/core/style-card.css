@@ -1,35 +1,37 @@
+body,html{
+    box-sizing: border-box;
+}
 button{
     outline: 0;
 }
 .item-card{
-    width: 30vw;
-    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #fff;
-    margin-top: 0.55vw;
-    margin-bottom: 0.55vw;
+    margin-top: 0.55em;
     flex-direction: column;
-    border-radius: 1vw;
-    padding: 0.5vw;
+    border-radius: 1em;
     transition: box-shadow 0.75s ease-in-out;
-    padding-top: 1vw;
-    padding-bottom: 1vw;
-    margin-right: 1vw;
+    padding-top: 1em;
+    margin-top: 1.5vw;
+    padding-bottom: 1em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    margin-bottom: 1.5vw;
 }
 .item-card:hover{
-    box-shadow: 0.3vw 0.3vw 0.9vw gray;
+    box-shadow: 0.3em 0.3em 0.9em gray;
 }
 .card-title{
     font-family: sans-serif;
     font-weight: 600;
-    font-size: 1.4vw;
-    margin-bottom: 1vw;
-    margin-top: 0.6vw;
+    font-size: min(1.4em,3em);
+    margin-bottom: 1em;
+    margin-top: 0.6em;
 }
 .card-img{
-    height: 100%;
     width: 100%;
 }
 .card-body{
@@ -45,52 +47,53 @@ button{
 }
 .price{
     font-weight: 900;
-    font-size: 1.3vw;
-    margin-right: 1.8vw;
+    font-size: min(1.3em,4vw);
+    float: left;
     position: relative;
-    top: 0.6vw;
+    top: 0.6em;
+    left: -1vw;
 }
 .add-btn{
     border: 0;
-    padding: 0.6vw 1.2vw 0.6vw 1.2vw;
-    border-radius: 1vw;
-    font-size: 1.2vw;
-    width: 20vw;
+    padding: 0.6em 1.2em 0.6em 1.2em;
+    border-radius: 1em;
+    font-size: min(1.2em,4vw);
+    width: max(20vw,15em);
     background: #E7D2CC;
     transition: box-shadow 0.5s ease-in;
-    margin-top: 1vw;
+    margin-top: 1em;
 }
 .add-btn:hover{
-    box-shadow: 0.3vw 0.3vw 0.6vw gray;
+    box-shadow: 0.3em 0.3em 0.6em gray;
 }
 .bag{
-    height: 1.6vw;
+    height: min(1.6rem,4vw);
     margin: 0;
     padding: 0;
 }
 .card-description{
     width: 100%;
     font-weight: 600;
-    margin-left: 0.5vw;
+    margin-left: 0.5em;
     text-align: left;
-    margin-bottom: 3vw;
-    font-size: 1vw;
+    margin-bottom: 3em;
+    font-size: min(1em,2.5vw);
 }
 .quantity{
     width: 100%;
     text-align: left;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.1vw;
+    font-size: 1.1em;
     font-weight: 600;
-    margin-left: 0.5vw;
+    margin-left: 0.5em;
 }
 .quantity input{
-    border-radius: 0.5vw;
-    font-size: 1.2vw;
-    border: 0.1vw solid gray;
-    padding-left: 0.5vw;
-    width: 4vw;
-    height: 1.5vw;
+    border-radius: 0.5em;
+    font-size: 1.2em;
+    border: 0.1em solid gray;
+    padding-left: 0.5em;
+    width: 4em;
+    height: 1.5em;
     outline: 0;
     text-align: center;
 

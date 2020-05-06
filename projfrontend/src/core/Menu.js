@@ -1,11 +1,11 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import {signout, isAuthenticated} from '../auth/helper';
 import {ReactComponent as ReactLogo} from '../user/logo3.svg';
 
 const currentTab = (history, path) => {
     if(history.location.pathname === path){
-        return {background: '#333', color: '#fff','borderRadius':'1vw'}
+        return {background: '#333', color: '#fff','borderRadius':'1em'}
     }
     else{
         return {color: '##333'}
@@ -16,7 +16,6 @@ const Menu = ({history}) => {
   require('./style-home.css')
 
   return (
-    <div>
     <div className="topnav">
     {isAuthenticated() &&  isAuthenticated().user.role ===0 && (
     <Link href='/signout' on onClick={() => {
@@ -38,7 +37,6 @@ const Menu = ({history}) => {
     )}
     <div><ReactLogo class="logo" /></div>
 </div>
-    </div>
   )
 }
 

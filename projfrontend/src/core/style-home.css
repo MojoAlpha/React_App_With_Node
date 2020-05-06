@@ -3,7 +3,8 @@ body,html{
  width: 100%;   
  margin: 0;
  font-family: Montserrat;
- font-size: 1vw;
+ font-size: 1em;
+ box-sizing: border-box;
  align-items: center;
  justify-content: center;
  text-decoration: none;
@@ -16,11 +17,11 @@ a{
     background-color: #fff;
     overflow: hidden;
     top: 0;
-    padding-top: 0.5vw;
+    padding-top: 0.5em;
     width: 95%;
-    border-bottom: 0.1vw solid #999;
+    border-bottom: 0.1em solid #999;
     margin-left: 2.5vw;
-    min-height: 3.5vw;
+    margin-right: 2.5em;
 }
 
 .topnav a{
@@ -30,28 +31,28 @@ a{
     color: #555;
     margin-left: 1vw;
     margin-right: 1vw;
-    margin-bottom: 0.8vw;
-    margin-top: 1.4vw;
+    margin-bottom: 0.8em;
+    margin-top: 1.4em;
 }
 
 .anim::after{
     display: block;
-    margin-top: 0.3vw;
+    margin-top: 0.3em;
     content: '';
     background-color: #555;
     width: 0%;
     transition: width 0.5s ease-in-out;
-    height: 0.1vw;
+    height: 0.1em;
 }
 .anim:hover:after{
     width: 100%;
 }
 .navIcon1{
-    font-size: 1.5vw;
+    font-size: min(1.6em,5vw);
     padding-left: 35%;
     padding-right: 35%;
-    padding-top: 0.1vw;
-    padding-bottom:0.1vw ;
+    padding-top: 0.1em;
+    padding-bottom:0.1em ;
     border-radius: 50%;
     transition: background-color 0.5s linear;
 }
@@ -59,24 +60,23 @@ a{
     background-color: #666;
     color: #fff;
 }
-.grid-item img{
-    height: 100%;
-     width: 50%;
-    float: right;   
+.main-img img{
+     width: 100%;   
 }
 .grid-container{
     overflow: hidden;
     display: grid;
+    grid-template-columns: 40% 60%;
     transition: box-shadow 0.5s linear;
 }
 .grid-container:hover{
-    box-shadow: 15px 15px 20px grey;
+    box-shadow: 2.5vw 2.5vw 3.5vw grey;
 }
 .logo{
     border: 0;
     margin-top: 0;
-    margin-bottom: 0.5vw;
-    height: 4em;
+    margin-bottom: 0.5em;
+    height: min(4em,12vw);
     width: 25%;
     position: relative;
     left: 3.5rem;
@@ -86,60 +86,57 @@ a{
 }
 .top{
     overflow: hidden;
-    height: 54vw;
+    padding-left: 10vw;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
 }
 .top h1{
-    margin-left: 40%;
-    font-size: 3.5vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: min(3rem,4vw);
     text-align: center;
     color: #444;
 }
 .top h4{
-    margin-left: 40%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 0;
-    font-size: 1vw;
+    font-size: min(1rem,2vw);
     text-align: center;
     color: #666;
 }
 .shop-btn{
     background: #CBCDCB;
-    margin-top: 1vw;
-    padding: 1vw 2vw 1vw 2vw;
-    border-top-left-radius: 2vw;
-    border-top-right-radius: 2vw;
-    border-bottom-left-radius: 2vw;
-    border-bottom-right-radius: 2vw;
+    margin-top: 1em;
+    padding: 1em 2em 1em 2em;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
     transition: all 0.5s;
 }
 .shop-btn:hover{
     background: #fff;
-    border: 0.2vw solid #607D86;
+    border: 0.2em solid #607D86;
     color: #333;
-    letter-spacing: 0.1vw;
-    box-shadow: 0.5vw 0.5vw 0.5vw gray;
+    letter-spacing: 0.1em;
+    box-shadow: 0.5em 0.5em 0.5em gray;
 }
 .slide-show{
-    height: 80%;
     width: 100%;
-    overflow: hidden;
+    height: 60%;
 }
 .slide-show img {
     size: inherit;
-    width: 100%; 
-    height: 48vw; 
-    position: absolute;
+    width: 100%;  
     z-index:-1;
     transition: opacity 1s ease-in-out;
   }
 .slide-container{
     width: 100%;
-    margin-top: 2vw ;
     transition: box-shadow 0.5s linear;
-    height: 56vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,10 +144,10 @@ a{
     margin-bottom: 2em;
 }
 .slide-container:hover{
-    box-shadow: 10px 10px 15px 15px grey;
+    box-shadow: 1em 1em 2em 2em grey;
 }
 .slide-container h1{
-    margin-bottom: 1vw;
+    margin-bottom: 1em;
 }
 .keys{
     display: flex;
@@ -168,7 +165,7 @@ a{
 }
 .key-el{
     display: flex;
-    font-size: 0.55vw;
+    font-size: 0.55em;
     margin-right: 9vw;
     margin-left: 9vw;
     flex-direction: column;
@@ -199,43 +196,43 @@ a{
     z-index: -1;
     color: #555;
     font-family: cardo;
-    font-size: 2.8vw;
+    font-size: min(2.8em,5.6vw);
     position: relative;
-    top: 2vw;
+    top: 1em;
 
 }
 .best h3{
-    font-size: 1.2vw;
+    font-size: min(1.2em,2.4vw);
     position: relative;
-    top: 4vw;
+    top: 3em;
 }
 .foot-grid{
     margin-bottom: 0;
-    margin-top: 8vw;
+    margin-top: max(7.5em,10vw);
     display: grid;
     grid-template-columns: auto auto auto;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
     color: #555;
-    padding-bottom: 4vw;
+    padding-bottom: 4em;
 }
 .foot-cont{
     display: inline-block;
     text-align: center;
-    margin-top: 4vw;
+    margin-top: 2em;
 }
 .foot-cont p{
-    font-size: 1vw;
-    margin-top: 0.5vw;
-    margin-bottom: 0.5vw;
+    font-size: min(1em,2.5vw);
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 .foot-cont h3{
-    font-size: 1.5vw;
+    font-size: min(1.5em,4vw);
 }
 .foot-cont img{
-    margin-right: 0.5vw;
-    height: 2vw;
-    width: 2vw;
+    margin-right: 0.5em;
+    height: min(2em,4.5vw);
+    width: min(2em,4.5vw);
 }
 .foot-cont p:hover{
     color: #C44B4F;
@@ -245,19 +242,19 @@ a{
     transition: box-shadow 0.5s linear;
 }
 .footer:hover{
-    box-shadow: 1vw 1vw 1.5vw 1.5vw grey;
+    box-shadow: 1em 1em 1.5em 1.5em grey;
 }
   .tooltip .tooltiptext {
     visibility: hidden;
-    width: 7vw;
+    width: 7em;
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 0.5vw 0;
-    border-radius: 1vw;
+    padding: 0.5em 0;
+    border-radius: 1em;
     position: relative;
-    right: 0.4vw;
-    top: 4vw;
+    right: 0.4em;
+    top: 4em;
     position: absolute;
     z-index: 5;
   }

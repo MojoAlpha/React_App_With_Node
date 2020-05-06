@@ -41,7 +41,7 @@ import { addItemToCart, removeItemFromCart } from './helper/cartHelper';
                     onClick={addToCart}
                     className="add-btn"
                   >
-                  <img src="https://img.icons8.com/windows/32/000000/shopping-bag-full.png" className='bag' /> <span style={{'position':'relative','top':'-0.2vw'}}>Add to Cart</span>
+                  <img src="https://img.icons8.com/windows/32/000000/shopping-bag-full.png" className='bag' /> <span style={{'position':'relative','top':'-0.2em'}}>Add to Cart</span>
                   </button>
           )
         )

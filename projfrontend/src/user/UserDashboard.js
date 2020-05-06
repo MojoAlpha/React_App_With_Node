@@ -28,8 +28,8 @@ const UserDashboard = () => {
         <Base title='UserDashboard Page'>
         <a href='/'><img className='back' src="https://img.icons8.com/cotton/64/000000/circled-chevron-left.png"/></a>
         <div className='main-head'>
-        <h2 style={{margin:'0',fontSize:'2vw',position:'relative',top:'-1vw'}}>Our Great Deals</h2>
-        <p style={{fontFamily:'cursive', margin:'0',marginLeft:'1vw'}}>A variety of designs to choose from...</p>
+        <h2 style={{margin:'0',fontSize:',min(2em,4vw)',position:'relative',top:'-1em'}}>Our Great Deals</h2>
+        <p style={{fontFamily:'cursive',fontSize:'min(1.2em,2.7vw)', margin:'0',marginLeft:'1em'}}>A variety of designs to choose from...</p>
         </div>
           <div className='grid-container2'>
            <div className='product-list'>
