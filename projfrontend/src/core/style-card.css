@@ -96,5 +96,7 @@ button{
     height: 1.5em;
     outline: 0;
     text-align: center;
-
 }
+input[type=number] {
+    -moz-appearance: textfield;
+  }

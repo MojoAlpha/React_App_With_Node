@@ -1,7 +1,7 @@
 import React, {useState, useEffect, Fragment} from 'react';
 import ImageHelper from './helper/ImgHelper';
 import { Redirect } from 'react-router-dom';
-import { addItemToCart, removeItemFromCart } from './helper/cartHelper';
+import { addItemToCart, removeItemFromCart,updateCount } from './helper/cartHelper';
 
 
     const Card = ({
@@ -23,8 +23,11 @@ import { addItemToCart, removeItemFromCart } from './helper/cartHelper';
       const cardPrice = product ? product.price : "Default"
       const cardStock = product ? product.stock : "1"
 
-      const handleChange=() =>{
-        setCount(count+1);
+      const handleChange = (event) => {
+        setCount(event.target.value);
+        setReload(!reload)
+        updateCount(product,count)
+        setReload(!reload)
       }
       
       const addToCart = () => {
