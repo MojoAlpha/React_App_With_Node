@@ -23,7 +23,7 @@ const StripeCheckout = ({products, setReload = f => f, Reload = undefined})  => 
     const getFinalPrice = () => {
        let amount =0
        products.map(p => {
-           amount = amount + p.price
+           amount = amount + p.price*p.count
        })
        return amount;
     }
@@ -62,7 +62,7 @@ const StripeCheckout = ({products, setReload = f => f, Reload = undefined})  => 
             shippingAddress
             billingAddress
             >
-            <button className='btn btn-success'>Pay With Stripe</button>
+            <button className='stripe-btn'>Pay With Stripe</button>
             </StripeCheckoutButton>
         ) : (
             <Link to='/signin'>
@@ -74,8 +74,8 @@ const StripeCheckout = ({products, setReload = f => f, Reload = undefined})  => 
     
 
     return (
-        <div>
-        <h3>StripeCheckout Loaded!! {getFinalPrice()} </h3>
+        <div className='checkout'>
+        <h3 className='checkout-load'>StripeCheckout Loaded!! {getFinalPrice()} </h3>
         {showStripeButton()}
         </div>
     )

@@ -23,6 +23,9 @@ import { addItemToCart, removeItemFromCart } from './helper/cartHelper';
       const cardPrice = product ? product.price : "Default"
       const cardStock = product ? product.stock : "1"
 
+      const handleChange=() =>{
+        setCount(count+1);
+      }
       
       const addToCart = () => {
         addItemToCart(product, () => setRedirect(true))
@@ -89,7 +92,7 @@ import { addItemToCart, removeItemFromCart } from './helper/cartHelper';
             {
               removeFromCart && (
                 <div className='quantity'>
-                <label>Quantity : </label><input type='number' defaultValue='1' />
+                <label>Quantity : </label><input type='number' value={count} onChange={handleChange} />
                 </div>
               )
             }
