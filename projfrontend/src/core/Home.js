@@ -1,11 +1,5 @@
 import React, {Component, useState,useEffect} from 'react';
 import Base from './Base';
-import mainPic from './bg3.jpg'
-import slide1 from './slide1.jpg';
-import slide2 from './slide2.jpg'
-import slide3 from './slide3.png'
-import slide4 from './slide4.jpg'
-import slide5 from './slide5.jpg'
 import { isAuthenticated } from '../auth/helper';
 
 
@@ -16,7 +10,7 @@ function Home() {
   const sliding=()=>{
       setTimeout(() => {
           setCount((count+1)%5+1);
-      }, 4000);
+      }, 3000);
     }
     useEffect(() => {
         
@@ -36,7 +30,7 @@ function Home() {
                     <h4 className="shop-btn" style={{'marginTop': '2em', 'color': '#4C5355'}}><a href='/user/dashboard'>SHOP NOW</a></h4>
                  )}
           </div>
-          <div className='main-img grid-item'><img src={mainPic} alt='IMG' /></div>
+          <div className='main-img grid-item'><img src='https://github.com/MojoAlpha/React_App_With_Node/blob/master/projfrontend/src/core/bg3.jpg?raw=true' alt='IMG' /></div>
 
   </div>
   <div className="keys">
@@ -63,11 +57,11 @@ function Home() {
       </div>
   <div className="slide-show">
   {sliding()}
-    {count==1 && <img src={slide1} />}
-    {count==2 && <img src={slide2} />}
-    {count==3 && <img src={slide3} />}
-    {count==4 && <img src={slide4} />}
-    {count==5 && <img src={slide5} />}
+    {count==1 && <img src='https://github.com/MojoAlpha/React_App_With_Node/blob/master/projfrontend/src/core/slide1.jpg?raw=true' />}
+    {count==2 && <img src='https://github.com/MojoAlpha/React_App_With_Node/blob/master/projfrontend/src/core/slide2.jpg?raw=true' />}
+    {count==3 && <img src='https://github.com/MojoAlpha/React_App_With_Node/blob/master/projfrontend/src/core/slide3.png?raw=true' />}
+    {count==4 && <img src='https://github.com/MojoAlpha/React_App_With_Node/blob/master/projfrontend/src/core/slide4.jpg?raw=true' />}
+    {count==5 && <img src='https://github.com/MojoAlpha/React_App_With_Node/blob/master/projfrontend/src/core/slide5.jpg?raw=true' />}
   </div>
  </div>
      <div className="best"><h1>LEADING FOR A REASON...</h1>

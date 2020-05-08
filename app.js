@@ -15,7 +15,7 @@ const orderRoutes = require('./routes/order')
 const stripeRoutes = require('./routes/stripePayment')
 
 //Db Connection
-mongoose.connect(process.env.DATABASE,{
+mongoose.connect("mongodb+srv://Mojo:Mohit*4446@store-hlcas.mongodb.net/test?retryWrites=true&w=majority",{
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true   //indexes the data when entered
@@ -24,6 +24,7 @@ mongoose.connect(process.env.DATABASE,{
 })
 
 //Middlewares
+app.use(express.static(path.join(__dirname, './projfrontend/public')))
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors());
@@ -36,7 +37,9 @@ app.use('/api',productRoutes);
 app.use('/api',orderRoutes); 
 app.use('/api',stripeRoutes); 
 
-
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/./projfrontend/public/index.html'))
+  })
 
 
 //PORT
