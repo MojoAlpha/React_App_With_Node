@@ -24,7 +24,6 @@ mongoose.connect("mongodb+srv://Mojo:Mohit*4446@store-hlcas.mongodb.net/test?ret
 })
 
 //Middlewares
-app.use(express.static(path.join(__dirname, './projfrontend/public')))
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors());
