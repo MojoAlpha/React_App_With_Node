@@ -1,38 +1,22 @@
 {
-  "name": "projbackend",
+  "name": "website",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "start-dev":"nodemon app.js",
-    "frontend": "cd projfrontend && npm start",
-    "api": "cd api && nodemon app.js",
-    "dev": "concurrently --kill-others-on-fail \"npm run api\" \"npm run projfrontend\"",
-    "heroku-postbuild": "cd projfrontend && npm install && npm run build"
+    "projfrontend": "cd projfrontend && npm start",
+    "projbackend": "cd projbackend && npm start",
+    "start": "concurrently - kill-others \"npm run projbackend\" \"npm run projfrontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MojoAlpha/React_App_With_Node.git"
   },
   "keywords": [],
-  "author": "MojoAlpha",
+  "author": "",
   "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "cookie-parser": "^1.4.5",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-jwt": "^5.3.3",
-    "express-validator": "^6.4.0",
-    "formidable": "^1.2.2",
-    "i": "^0.3.6",
-    "jsonwebtoken": "^8.5.1",
-    "lodash": "^4.17.15",
-    "mongoose": "^5.9.9",
-    "morgan": "^1.10.0",
-    "npm": "^6.14.4",
-    "stripe": "^8.47.0",
-    "uuid": "^7.0.3"
+  "bugs": {
+    "url": "https://github.com/MojoAlpha/React_App_With_Node/issues"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.3"
-  }
+  "homepage": "https://github.com/MojoAlpha/React_App_With_Node#readme"
 }
