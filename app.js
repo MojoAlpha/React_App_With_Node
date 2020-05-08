@@ -37,8 +37,8 @@ app.use('/api',productRoutes);
 app.use('/api',orderRoutes); 
 app.use('/api',stripeRoutes); 
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + './projfrontend/public/index.html'))
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname ,'./projfrontend/public/index.html'))
   })
 
 
